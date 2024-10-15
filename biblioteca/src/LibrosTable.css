@@ -1,0 +1,29 @@
+.libros-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 10vh;
+  }
+  
+  .libros-table th,
+  .libros-table td {
+    padding-right: 18vh;
+    padding-top: 1vh;
+    padding-bottom: 1.5vh;
+    text-align: left;
+  }
+  
+  .libros-table th {
+    background-color: transparent;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .libros-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .libros-table tbody td {
+    border: none;
+  }
+  

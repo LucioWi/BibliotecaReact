@@ -6,38 +6,72 @@ html, body {
 }
 
 body {
+  font-family: 'Barlow';
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  font-family: 'Arial', sans-serif;
   color: #333;
   min-width: 100vh;
   min-height: 100vh;
 }
 
 header {
-  background-color: #1f0caf;
+  background: rgb(50,40,226);
+    background: linear-gradient(90deg, rgba(50,40,226,1) 0%, rgba(194,0,173,1) 100%);
   color: white;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   min-width: 100vh;
   position: relative;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12vh;
+}
+
+.brand {
+  font-weight: 300;
+  margin: 0;
+  font-size: 28px;
+  text-decoration-line: none;
+  color: white;
+  font-weight: 400;
+}
+
+.nav-buttons {
+  display: flex; 
+  align-items: center;
+  gap: 10vh;
+  padding-right: 12vh;
+}
+
+.nav-buttons button {
+  color: white;
+  background: none;
+  padding: 10px 15px;
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-buttons button:hover {
+  color: #1f0caf;
+}
+
 main {
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* Cambiar a flex-start para alinear a la izquierda */
-  align-items: flex-start; /* Alinear al inicio verticalmente */
-  padding: 20px; /* Ajustar padding según sea necesario */
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-
 button {
-  border-radius: 8px;
-  border: 2px solid #f0f0f0;
+  border-style: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
   font-family: inherit;
   background-color: #ffffff00;
   cursor: pointer;
@@ -46,11 +80,11 @@ button {
   margin-right: .5%;
   color: #f0f0f0;
 }
+
 button:hover {
-  border-color: #f0f0f0;
   color: #424242;
-  background-color: #f0f0f0;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

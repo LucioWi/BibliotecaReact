@@ -15,14 +15,24 @@ function App() {
     <div>
       <header>
         <nav>
-        <button onClick={() => handleButtonClick('Prestamo')}>Prestamo</button>
-          <button onClick={() => handleButtonClick('Reservas')}>Reservas</button>
-          <button onClick={() => handleButtonClick('Agregar libros')}>Agregar libros</button>
-          <button onClick={() => handleButtonClick('Usuarios')}>Usuarios</button>
+          <h1 className="brand">Between the lines</h1>
+          <div className="nav-buttons">
+            <button onClick={() => handleButtonClick('Prestamo')}>Admin</button>
+            <button onClick={() => handleButtonClick('Reservas')}>Cart</button>
+            <button onClick={() => handleButtonClick('Agregar libros')}>Account</button>
+          </div>
         </nav>
       </header>
+    
+      <div className="section-buttons">
+        <button onClick={() => handleButtonClick('Prestamo')}>Prestamo</button>
+        <button onClick={() => handleButtonClick('Reservas')}>Reservas</button>
+        <button onClick={() => handleButtonClick('Agregar libros')}>Agregar libros</button>
+        <button onClick={() => handleButtonClick('Usuarios')}>Usuarios</button>
+      </div>
+
       <main>
-      {content === 'Prestamo' && <Prestamo />}
+        {content === 'Prestamo' && <Prestamo />}
         {content === 'Reservas' && <Reservas />}
         {content === 'Agregar libros' && <AgregarLibros />}
         {content === 'Usuarios' && <Usuarios />}
