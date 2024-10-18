@@ -1,18 +1,18 @@
 .containerBotonesAgregar {
-    display: flex; /* Usar flexbox para alinear los botones en fila */
-    align-items: center; /* Alinear los botones verticalmente */
-    justify-content: flex-start; /* Alinear a la izquierda */
-    margin: 0; /* Eliminar márgenes por defecto */
-    padding: 0; /* Eliminar padding por defecto */
-    width: 100%; /* Asegurarse de que ocupa el ancho completo */
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
 }
 
 .Agregar, .AgregarAPI {
-    all: unset; /* Eliminar estilos por defecto */
+    all: unset; 
     border-radius: 6px;
     color: white;
     padding: 1.7vh;
-    margin: 0 10px; /* Espacio horizontal entre los botones */
+    margin: 0 10px; 
 }
 
 .Agregar {
