@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Usuarios = () => (
     <div>
       <h2>Contenido de Usuarios</h2>

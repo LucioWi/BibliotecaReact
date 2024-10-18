@@ -48,8 +48,8 @@ nav {
   padding-right: 12vh;
 }
 
-.nav-buttons button {
-  color: white;
+.nav-buttons, button {
+  color: #131313;
   background: none;
   padding: 10px 15px;
   cursor: pointer; 
@@ -68,24 +68,23 @@ main {
   padding: 20px;
 }
 
-button {
-  border-style: none;
+
+
+.section-buttons {
+  border: 2px #0330ac solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-family: inherit;
   background-color: #ffffff00;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin-left: .5%;
-  margin-right: .5%;
-  color: #f0f0f0;
-}
-
-button:hover {
-  color: #424242;
+  margin: .5%;
+  color: #0330ac;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  
 }

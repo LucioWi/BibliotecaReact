@@ -20,8 +20,16 @@
     margin-left: 10vh;
 }
 
+.Agregar:hover{
+    color: #ececec;
+    background-color: rgb(24, 91, 206);
+}
+
 .AgregarAPI {
     background-color: rgb(91, 91, 91);
 }
 
-
+.AgregarAPI:hover{
+    color: #ececec;
+    background-color: rgb(54, 54, 54);
+}

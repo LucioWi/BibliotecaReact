@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Reservas = () => (
     <div>
       <h2>Contenido de Reservas</h2>
