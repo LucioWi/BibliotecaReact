@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #1f0caf;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  min-width: 100vh;
+  position: relative;
+}
+main {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Cambiar a flex-start para alinear a la izquierda */
+  align-items: flex-start; /* Alinear al inicio verticalmente */
+  padding: 20px; /* Ajustar padding según sea necesario */
+}
+
+
+button {
+  border-radius: 8px;
+  border: 2px solid #f0f0f0;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ffffff00;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-left: .5%;
+  margin-right: .5%;
+  color: #f0f0f0;
+}
+button:hover {
+  border-color: #f0f0f0;
+  color: #424242;
+  background-color: #f0f0f0;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
