@@ -16,20 +16,25 @@ function App() {
     <div>
       <header>
         <nav>
-          <h1 className="brand">Between the sas</h1>
+          <h1 className="brand">Between the Lines</h1>
           <div className="nav-buttons">
-            <button onClick={() => handleButtonClick('Prestamo')}>Por el momento</button>
-            <button onClick={() => handleButtonClick('Reservas')}>no hacen</button>
-            <button onClick={() => handleButtonClick('Agregar libros')}>falta</button>
+            <button onClick={() => handleButtonClick('Admin')}>Admin</button>
+            <button onClick={() => handleButtonClick('Cart')}>Cart</button>
+            <button onClick={() => handleButtonClick('Account')}>Account</button>
           </div>
         </nav>
       </header>
-    
+
       <div className="section">
-        <button className="section-buttons" onClick={() => handleButtonClick('Prestamo')}>Prestamo</button>
-        <button className="section-buttons" onClick={() => handleButtonClick('Reservas')}>Reservas</button>
-        <button className="section-buttons" onClick={() => handleButtonClick('Agregar libros')}>Agregar libros</button>
-        <button className="section-buttons" onClick={() => handleButtonClick('Usuarios')}>Usuarios</button>
+        {['Prestamo', 'Reservas', 'Agregar libros', 'Usuarios'].map((section) => (
+          <button
+            key={section}
+            className={`section-buttons ${content === section ? 'selected' : ''}`}
+            onClick={() => handleButtonClick(section)}
+          >
+            {section}
+          </button>
+        ))}
       </div>
 
       <main>
