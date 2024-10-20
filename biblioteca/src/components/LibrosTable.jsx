@@ -1,7 +1,7 @@
 import React from 'react';
 import '../LibrosTable.css';
 
-const LibrosTable = () => {
+const LibrosTable = ({ libros }) => {
   return (
     <table className="libros-table">
       <thead>
@@ -12,16 +12,22 @@ const LibrosTable = () => {
           <th>ISBN</th>
           <th>Price</th>
           <th>Quantity</th>
-          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>rar</td>
-        </tr>
+        {libros.map((libro, index) => (
+          <tr key={index}>
+            <td className="title">{libro.title}</td>
+            <td>{libro.author}</td>
+            <td>{libro.genre}</td>
+            <td>{libro.isbn}</td>
+            <td className="price">{libro.price}</td>
+            <td className="quantity">{libro.quantity}</td>
+          </tr>
+        ))}
       </tbody>
+
     </table>
-    
   );
 };
 
