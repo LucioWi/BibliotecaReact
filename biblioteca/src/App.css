@@ -86,20 +86,6 @@ main {
   padding: 20px;
 }
 
-.section-buttons {
-  border: 2px #0330ac solid;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-family: inherit;
-  background-color: #ffffff00;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin: .5%;
-  color: #0330ac;
-}
-
 .section {
   display: flex;
   align-items: center;
@@ -111,16 +97,18 @@ main {
 }
 
 .section-buttons {
+  font-family: inherit;
+  background-color: #ffffff00;
   border: none;
   border-bottom: 1px solid transparent;
   background: none;
   cursor: pointer;
   padding: 0.6em 1.2em;
-  font-size: 3vh;
+  font-size: 2.1vh;
   color: #0330ac;
   transition: color 0.3s, border-color 0.3s;
   position: relative;
-  margin-right: 10px;
+  margin: .5%;
 }
 
 /* Estilos para el botón seleccionado */
