@@ -16,7 +16,12 @@ function App() {
     <div>
       <header>
         <nav>
-          <h1 className="brand">Between the Lines</h1>
+          <div className='headerLogo'>
+            <a href="">
+            <img className='headerLogo-img' src="./img/EnetLogo.png" href=""></img>
+            <h1 className='headerLogo-text ' href="">Enet Biblioteca</h1>
+            </a>
+          </div>
           <div className="nav-buttons">
             <button onClick={() => handleButtonClick('Admin')}>Admin</button>
             <button onClick={() => handleButtonClick('Cart')}>Cart</button>
