@@ -5,9 +5,9 @@ const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay open" onClick={onClose}>
-      <div className="modal open" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>&times;</button>
+    <div className="modal-overlay">
+      <div className="modal">
+        <button className="close-button" onClick={onClose}>×</button>
         {children}
       </div>
     </div>
@@ -15,5 +15,3 @@ const Modal = ({ isOpen, onClose, children }) => {
 };
 
 export default Modal;
-
-

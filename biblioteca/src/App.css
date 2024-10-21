@@ -14,12 +14,14 @@ body {
   min-width: 100vh;
   min-height: 100vh;
 }
+
 button {
   border-style: none;
 }
 
 header {
   background: #0097db;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   color: white;
   padding: 10px;
   margin-bottom: 2vh;
@@ -41,11 +43,12 @@ header {
   color: #ffffff;
 }
 
-a{
+a {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -86,7 +89,6 @@ nav {
   background-color: #ffffff;
 }
 
-
 main {
   flex: 1;
   display: flex;
@@ -100,57 +102,56 @@ main {
   align-items: center;
   justify-content: flex-start;
   margin: 0 12vh;
-  margin-top: 4vh;
+  margin-top: 3vh;
   border-bottom: 1px solid #cccccc;
   position: relative;
+  z-index: 0;
 }
 
 .section-buttons {
   font-family: inherit;
-  background-color: #ffffff00;
+  background-color: transparent;
   border: none;
   border-bottom: 1px solid transparent;
-  background: none;
   cursor: pointer;
-  padding: 0.6em 1.2em;
+  padding: 1vh 2vh;
   font-size: 2.1vh;
   color: #0097db;
   transition: color 0.3s, border-color 0.3s;
   position: relative;
-  margin: .5%;
+  margin: 0.5%;
   font-weight: 600;
 }
-
 
 .section-buttons.selected {
   border-bottom: none;
   color: #003c81;
+  z-index: 1;
 }
 
-.section-buttons.selected::before,
+.section-buttons.selected::before {
+  content: '';
+  position: absolute;
+  bottom: -9px; /* Posiciona justo en la línea inferior */
+  left: -8px;
+  width: calc(100% + 18px);
+  height: 5px; /* Ajusta el grosor de la línea para coincidir */
+  background-color: #ffffff;
+  z-index: -1;
+}
+
 .section-buttons.selected::after {
   content: '';
   position: absolute;
   top: -4px;
-  height: calc(100% + 4px);
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 10px);
   border: 1px solid #cccccc;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
   border-bottom: none;
-}
-
-.section-buttons.selected::before {
-  left: -8px;
-  width: calc(100% + 16px);
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-bottom: none;
-}
-
-.section-buttons.selected::after {
-  left: -8px;
-  width: calc(100% + 16px);
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-top: none;
+  z-index: 0;
 }

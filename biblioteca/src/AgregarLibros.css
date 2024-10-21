@@ -23,6 +23,7 @@
 .Agregar:hover{
     color: #ececec;
     background-color: rgb(24, 91, 206);
+    cursor: pointer;
 }
 
 .AgregarAPI {
@@ -32,6 +33,7 @@
 .AgregarAPI:hover{
     color: #ececec;
     background-color: rgb(54, 54, 54);
+    cursor: pointer;
 }
 
 .char-count {
