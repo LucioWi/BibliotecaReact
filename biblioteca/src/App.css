@@ -6,6 +6,12 @@ html, body {
   width: 100%;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -91,6 +97,7 @@ nav {
 
 main {
   flex: 1;
+  flex-grow: 1;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

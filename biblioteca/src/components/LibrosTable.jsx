@@ -10,7 +10,7 @@ const LibrosTable = ({ libros }) => {
           <th>Author</th>
           <th>Genre</th>
           <th>ISBN</th>
-          <th>Price</th>
+          <th>Editorial</th>
           <th>Quantity</th>
         </tr>
       </thead>
@@ -21,7 +21,7 @@ const LibrosTable = ({ libros }) => {
             <td>{libro.author}</td>
             <td>{libro.genre}</td>
             <td>{libro.isbn}</td>
-            <td className="price">{libro.price}</td>
+            <td className="price">{libro.editorial}</td>
             <td className="quantity">{libro.quantity}</td>
           </tr>
         ))}

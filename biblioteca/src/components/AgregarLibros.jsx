@@ -12,7 +12,7 @@ const AgregarLibros = () => {
     genre: '',
     description: '',
     isbn: '',
-    price: '',
+    editorial: '',
     quantity: '',
     imageUrl: '',
   });
@@ -29,7 +29,7 @@ const AgregarLibros = () => {
       genre: '',
       description: '',
       isbn: '',
-      price: '',
+      editorial: '',
       quantity: '',
       imageUrl: '',
     });
@@ -89,8 +89,8 @@ const AgregarLibros = () => {
               <input type="text" name="isbn" value={newBook.isbn} onChange={handleInputChange} required />
             </div>
             <div className="form-group">
-              <label>Precio *</label>
-              <input type="number" name="price" value={newBook.price} onChange={handleInputChange} required />
+              <label>Editorial *</label>
+              <input type="text" name="editorial" value={newBook.editorial} onChange={handleInputChange} required />
             </div>
             <div className="form-group">
               <label>Cantidad *</label>

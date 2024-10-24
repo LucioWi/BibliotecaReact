@@ -4,6 +4,7 @@ import Reservas from './components/Reservas';
 import AgregarLibros from './components/AgregarLibros';
 import Usuarios from './components/Usuarios';
 import Prestamo from './components/Prestamo';
+import Footer from './components/Footer';
 
 function App() {
   const [content, setContent] = useState('');
@@ -48,6 +49,10 @@ function App() {
         {content === 'Agregar libros' && <AgregarLibros />}
         {content === 'Usuarios' && <Usuarios />}
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
