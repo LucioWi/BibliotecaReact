@@ -84,7 +84,7 @@ const AgregarLibros = () => {
     <div>
       <div className="containerBotonesAgregar">
         <button className='Agregar' onClick={handleAddBookClick}>+ Añadir Libro</button>
-        <button className='AgregarAPI'>+ Añadir Libro (Google Books API)</button>
+        <button className='AgregarAPI'>+ Añadir Libro (Google Books)</button>
       </div>
       <LibrosTable libros={libros} />
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
