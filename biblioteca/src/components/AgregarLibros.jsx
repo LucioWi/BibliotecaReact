@@ -52,16 +52,15 @@ const AgregarLibros = () => {
         
         const response = await fetch(`http://api-biblioteca.test/api/author/search?name=${encodeURIComponent(value)}`, {
           headers: {
-            'Authorization': token, // Agregar el token al encabezado
+            'Authorization': token,
           },
         });
         const data = await response.json();
-        console.log(data); // Debug: Verifica lo que devuelve la API
   
         if (data.authors && data.authors.length > 0) {
-          setAuthors(data.authors);
+          setAuthors(data.authors); // Mostrar autores coincidentes
         } else {
-          setAuthors([]); // Limpiar si no hay autores
+          setAuthors([]); // Limpiar si no hay coincidencias
         }
       } catch (error) {
         console.error('Error fetching authors:', error);
@@ -72,13 +71,16 @@ const AgregarLibros = () => {
     }
   };
 
+  const handleAuthorSelect = (authorName) => {
+    setNewBook((prevBook) => ({ ...prevBook, author: authorName })); // Autocompletar con el nombre seleccionado
+    setAuthors([]); // Cerrar el dropdown de sugerencias
+  };
+
   const handleSaveBook = (e) => {
     e.preventDefault();
     setLibros((prevLibros) => [...prevLibros, newBook]);
     handleCloseModal();
   };
-
-  
 
   return (
     <div>
@@ -107,7 +109,7 @@ const AgregarLibros = () => {
               {authors.length > 0 && (
                 <ul className="author-suggestions">
                   {authors.map((author) => (
-                    <li key={author.id} onClick={() => setNewBook((prevBook) => ({ ...prevBook, author: author.name }))}>
+                    <li key={author.id} onClick={() => handleAuthorSelect(author.name)}>
                       {author.name}
                     </li>
                   ))}

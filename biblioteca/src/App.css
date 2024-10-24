@@ -163,3 +163,34 @@ nav {
   border-bottom: none;
   z-index: 0;
 }
+
+/* Dropdown styles */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Posiciona justo debajo del botón Account */
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown button {
+  background-color: white;
+  color: #0097db;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown button:hover {
+  background-color: #f0f0f0;
+}
