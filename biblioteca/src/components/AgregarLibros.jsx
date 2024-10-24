@@ -17,6 +17,7 @@ const AgregarLibros = () => {
     imageUrl: '',
   });
   const [authors, setAuthors] = useState([]);
+  const [showNoAuthorMessage, setShowNoAuthorMessage] = useState(false); // Nueva variable para controlar el mensaje
 
   const handleAddBookClick = () => {
     setIsModalOpen(true);
@@ -59,15 +60,19 @@ const AgregarLibros = () => {
   
         if (data.authors && data.authors.length > 0) {
           setAuthors(data.authors); // Mostrar autores coincidentes
+          setShowNoAuthorMessage(false); // No mostrar el mensaje de "No encontraste el autor?"
         } else {
           setAuthors([]); // Limpiar si no hay coincidencias
+          setShowNoAuthorMessage(true); // Mostrar el mensaje si no hay autores
         }
       } catch (error) {
         console.error('Error fetching authors:', error);
         setAuthors([]); // Limpiar en caso de error
+        setShowNoAuthorMessage(true); // Mostrar el mensaje de "No encontraste el autor?"
       }
     } else {
       setAuthors([]); // Limpiar la lista si hay menos de 3 caracteres
+      setShowNoAuthorMessage(false); // No mostrar el mensaje si no hay suficientes caracteres
     }
   };
 
@@ -113,6 +118,10 @@ const AgregarLibros = () => {
                       {author.name}
                     </li>
                   ))}
+                </ul>
+              )}
+              {showNoAuthorMessage && authors.length === 0 && (
+                <ul className="author-suggestions">
                   <li style={{ fontStyle: 'italic' }}>No encontraste el autor? Se guardará como nuevo autor.</li>
                 </ul>
               )}
@@ -164,3 +173,4 @@ const AgregarLibros = () => {
 };
 
 export default AgregarLibros;
+
