@@ -126,3 +126,34 @@ textarea {
 .form-row:nth-child(3) .form-group {
   margin-right: 0;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

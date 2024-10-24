@@ -56,3 +56,21 @@
     overflow: auto; 
     resize: vertical; /* Permitir solo el redimensionamiento vertical */
   }
+
+  .author-suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.author-suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.author-suggestions li:hover {
+    background-color: #f0f0f0;
+}

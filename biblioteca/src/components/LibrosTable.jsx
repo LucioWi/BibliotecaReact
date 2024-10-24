@@ -15,18 +15,17 @@ const LibrosTable = ({ libros }) => {
         </tr>
       </thead>
       <tbody>
-        {libros.map((libro, index) => (
-          <tr key={index}>
+        {libros.map((libro) => (
+          <tr key={libro.isbn}>
             <td className="title">{libro.title}</td>
             <td>{libro.author}</td>
             <td>{libro.genre}</td>
             <td>{libro.isbn}</td>
-            <td className="price">{libro.editorial}</td>
-            <td className="quantity">{libro.quantity}</td>
+            <td>{libro.editorial}</td>
+            <td>{libro.quantity}</td>
           </tr>
         ))}
       </tbody>
-
     </table>
   );
 };
