@@ -138,7 +138,7 @@ const AgregarLibros = () => {
                 <ul className="author-suggestions">
                   <li 
                     style={{ fontStyle: 'italic', cursor: 'pointer' }}
-                    onClick={handleNewAuthorConfirmation}
+                    onClick={handleNewAuthorConfirmation} 
                   >
                     No encontraste el autor? Se guardará como nuevo autor.
                   </li>
