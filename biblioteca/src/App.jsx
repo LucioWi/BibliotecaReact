@@ -5,9 +5,12 @@ import AgregarLibros from './components/AgregarLibros';
 import Usuarios from './components/Usuarios';
 import Prestamo from './components/Prestamo';
 import Footer from './components/Footer';
+import Inicio from './components/Inicio';
+import PanelAdmin from './components/Inicio';
 
 function App() {
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState('Inicio');
+
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleButtonClick = (section) => {
@@ -46,7 +49,7 @@ function App() {
       </header>
 
       <div className="section">
-        {['Prestamo', 'Reservas', 'Agregar libros', 'Usuarios'].map((section) => (
+        {['Inicio', 'Prestamo', 'Reservas', 'Agregar libros', 'Usuarios'].map((section) => (
           <button
             key={section}
             className={`section-buttons ${content === section ? 'selected' : ''}`}
@@ -58,10 +61,12 @@ function App() {
       </div>
 
       <main>
+        {content === 'Inicio' && <Inicio handleButtonClick={handleButtonClick} />}
         {content === 'Prestamo' && <Prestamo />}
         {content === 'Reservas' && <Reservas />}
         {content === 'Agregar libros' && <AgregarLibros />}
         {content === 'Usuarios' && <Usuarios />}
+        {content === 'Admin' && <PanelAdmin handleButtonClick={handleButtonClick} />}
       </main>
 
       <footer>
