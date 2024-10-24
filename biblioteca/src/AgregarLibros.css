@@ -64,6 +64,10 @@
     border: 1px solid #ccc;
     max-height: 150px;
     overflow-y: auto;
+    position: absolute; /* Superponer el dropdown */
+    background-color: white;
+    width: 100%; /* Asegurarse de que ocupe el mismo ancho que el input */
+    z-index: 1000; /* Superponer sobre otros elementos */
 }
 
 .author-suggestions li {
@@ -73,4 +77,9 @@
 
 .author-suggestions li:hover {
     background-color: #f0f0f0;
+}
+
+/* Asegurarse de que el contenedor del input tenga posición relativa para posicionar bien el dropdown */
+.form-group {
+    position: relative;
 }

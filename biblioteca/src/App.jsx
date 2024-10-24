@@ -8,9 +8,15 @@ import Footer from './components/Footer';
 
 function App() {
   const [content, setContent] = useState('');
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const handleButtonClick = (section) => {
     setContent(section);
+    setShowDropdown(false); // Cierra el dropdown si se hace clic en otro botón
+  };
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
   };
 
   return (
@@ -19,14 +25,22 @@ function App() {
         <nav>
           <div className='headerLogo'>
             <a href="">
-            <img className='headerLogo-img' src="./img/EnetLogo.png" href=""></img>
-            <h1 className='headerLogo-text ' href="">Enet Biblioteca</h1>
+              <img className='headerLogo-img' src="./img/EnetLogo.png" href=""></img>
+              <h1 className='headerLogo-text ' href="">Enet Biblioteca</h1>
             </a>
           </div>
           <div className="nav-buttons">
             <button onClick={() => handleButtonClick('Admin')}>Admin</button>
             <button onClick={() => handleButtonClick('Cart')}>Cart</button>
-            <button onClick={() => handleButtonClick('Account')}>Account</button>
+            <div className="dropdown-container">
+              <button onClick={toggleDropdown}>Account</button>
+              {showDropdown && (
+                <div className="dropdown">
+                  <button onClick={() => console.log('Iniciar sesión')}>Iniciar sesión</button>
+                  <button onClick={() => console.log('Registrarse')}>Registrarse</button>
+                </div>
+              )}
+            </div>
           </div>
         </nav>
       </header>
@@ -58,3 +72,4 @@ function App() {
 }
 
 export default App;
+
