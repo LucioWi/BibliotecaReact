@@ -72,7 +72,7 @@ const AgregarLibros = () => {
           </div>
           <div className="form-group">
             <label>Breve descripción *</label>
-            <textarea 
+            <textarea className='text-area'
               name="description" 
               value={newBook.description} 
               onChange={handleInputChange} 
