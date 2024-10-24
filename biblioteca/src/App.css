@@ -9,7 +9,17 @@ html, body {
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  flex-grow: 1;
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 150vh;
 }
 
 body {
@@ -17,8 +27,8 @@ body {
   flex-direction: column;
   background-color: #ffffff;
   color: #333;
-  min-width: 100vh;
-  min-height: 100vh;
+  width: 100vw; 
+  overflow-x: hidden; 
 }
 
 button {
@@ -95,15 +105,6 @@ nav {
   background-color: #ffffff;
 }
 
-main {
-  flex: 1;
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px;
-}
-
 .section {
   display: flex;
   align-items: center;
@@ -139,10 +140,10 @@ main {
 .section-buttons.selected::before {
   content: '';
   position: absolute;
-  bottom: -9px; /* Posiciona justo en la línea inferior */
+  bottom: -9px; 
   left: -8px;
   width: calc(100% + 18px);
-  height: 5px; /* Ajusta el grosor de la línea para coincidir */
+  height: 5px; 
   background-color: #ffffff;
   z-index: -1;
 }
