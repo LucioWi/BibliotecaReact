@@ -12,7 +12,8 @@
     border-radius: 6px;
     color: white;
     padding: 1.7vh;
-    margin: 0 10px; 
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
 }
 
 .Agregar {
@@ -22,7 +23,7 @@
 
 .Agregar:hover{
     color: #ececec;
-    background-color: rgb(24, 91, 206);
+    background-color: rgb(19, 76, 176);
     cursor: pointer;
 }
 
