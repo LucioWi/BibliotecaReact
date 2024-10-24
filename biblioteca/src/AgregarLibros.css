@@ -48,4 +48,11 @@
     margin-top: 25px;
     color: #5e5e5e;
 }
-  
+  .text-area{
+    max-width: 999px; 
+    max-height: 500px; 
+    width: 100%; 
+    height: fit-content; 
+    overflow: auto; 
+    resize: vertical; /* Permitir solo el redimensionamiento vertical */
+  }
