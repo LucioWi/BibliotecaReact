@@ -34,7 +34,7 @@ const Register = () => {
             type="text"
             id="nombre"
             name="nombre"
-            placeholder='nombre...'
+            placeholder='Nombre...'
             value={formData.nombre}
             onChange={handleChange}
             required
@@ -47,7 +47,7 @@ const Register = () => {
             type="text"
             id="apellido"
             name="apellido"
-            placeholder='apellido...'
+            placeholder='Apellido...'
             value={formData.apellido}
             onChange={handleChange}
             required
@@ -60,7 +60,7 @@ const Register = () => {
             type="email"
             id="email"
             name="email"
-            placeholder='emial...'
+            placeholder='Email...'
             value={formData.email}
             onChange={handleChange}
             required
@@ -73,7 +73,7 @@ const Register = () => {
             type="tel"
             id="telefono"
             name="telefono"
-            placeholder='telefono...'
+            placeholder='Telefono...'
             value={formData.telefono}
             onChange={handleChange}
             required
@@ -86,7 +86,7 @@ const Register = () => {
             type="password"
             id="contraseña"
             name="contraseña"
-            placeholder='constraseña...'
+            placeholder='Constraseña...'
             value={formData.contraseña}
             onChange={handleChange}
             required

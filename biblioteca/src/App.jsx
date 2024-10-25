@@ -40,7 +40,7 @@ function App() {
               <button onClick={toggleDropdown}>Account</button>
               {showDropdown && (
                 <div className="dropdown">
-                  <button onClick={() => console.log('Iniciar sesión')}>Iniciar sesión</button>
+                  <button onClick={() => navigate('/Inicio-Sesion')}>Iniciar sesión</button>{/* Redirige a /Inicio-Sesion */}
                   <button onClick={() => navigate('/register')}>Registrarse</button> {/* Redirige a /register */}
                 </div>
               )}
