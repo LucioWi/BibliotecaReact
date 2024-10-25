@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import Reservas from './components/Reservas';
 import AgregarLibros from './components/AgregarLibros';
 import Usuarios from './components/Usuarios';
 import Prestamo from './components/Prestamo';
-import Footer from './components/Footer';
+import Footer from './layout/Footer';
 import Inicio from './components/Inicio';
 import PanelAdmin from './components/Inicio';
 
 function App() {
+  const navigate = useNavigate(); // Inicializa el hook useNavigate
   const [content, setContent] = useState('Inicio');
-
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleButtonClick = (section) => {
@@ -28,8 +29,8 @@ function App() {
         <nav>
           <div className='headerLogo'>
             <a href="">
-              <img className='headerLogo-img' src="./img/EnetLogo.png" href=""></img>
-              <h1 className='headerLogo-text ' href="">Enet Biblioteca</h1>
+              <img className='headerLogo-img' src="./img/EnetLogo.png" alt="Logo" />
+              <h1 className='headerLogo-text'>Enet Biblioteca</h1>
             </a>
           </div>
           <div className="nav-buttons">
@@ -40,7 +41,7 @@ function App() {
               {showDropdown && (
                 <div className="dropdown">
                   <button onClick={() => console.log('Iniciar sesión')}>Iniciar sesión</button>
-                  <button onClick={() => console.log('Registrarse')}>Registrarse</button>
+                  <button onClick={() => navigate('/register')}>Registrarse</button> {/* Redirige a /register */}
                 </div>
               )}
             </div>
@@ -77,4 +78,3 @@ function App() {
 }
 
 export default App;
-
