@@ -89,6 +89,7 @@ textarea {
 
 textarea {
   height: 80px;
+  max-width: 100%;
   font-family: inherit;
 }
 

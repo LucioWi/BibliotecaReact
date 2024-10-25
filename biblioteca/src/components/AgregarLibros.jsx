@@ -28,10 +28,10 @@ const AgregarLibros = () => {
     setNewBook({
       title: '',
       author: '',
-      genre: '',
+      category: '',
       description: '',
       isbn: '',
-      editorial: '',
+      publisher: '',
       quantity: '',
       imageUrl: '',
     });
@@ -137,7 +137,7 @@ const AgregarLibros = () => {
               )}
               {showNoAuthorMessage && authors.length === 0 && (
                 <ul className="author-suggestions">
-                  <li 
+                  <li
                     style={{ fontStyle: 'italic', cursor: 'pointer' }}
                     onClick={handleNewAuthorConfirmation} // Este evento cierra el dropdown
                   >
@@ -147,8 +147,8 @@ const AgregarLibros = () => {
               )}
             </div>
             <div className="form-group">
-              <label>Género *</label>
-              <input type="text" name="genre" value={newBook.genre} onChange={handleInputChange} required />
+              <label>Categoría *</label>
+              <input type="text" name="category" value={newBook.category} onChange={handleInputChange} required />
             </div>
           </div>
           <div className="form-group">
@@ -171,7 +171,7 @@ const AgregarLibros = () => {
             </div>
             <div className="form-group">
               <label>Editorial *</label>
-              <input type="text" name="editorial" value={newBook.editorial} onChange={handleInputChange} required />
+              <input type="text" name="publisher" value={newBook.publisher} onChange={handleInputChange} required />
             </div>
             <div className="form-group">
               <label>Cantidad *</label>
