@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import '../AgregarLibros.css';
 import LibrosTable from './LibrosTable';
@@ -153,6 +154,7 @@ const AgregarLibros = () => {
           </div>
           <div className="form-group">
             <label>Breve descripción *</label>
+            <br></br>
             <textarea className='text-area'
               name="description"
               value={newBook.description}
@@ -179,7 +181,7 @@ const AgregarLibros = () => {
             </div>
           </div>
           <div className="form-group">
-            <label>URL de la imagen * (debe terminar en 'jpg', 'jpeg', o 'png')</label>
+            <label>URL de la imagen * (debe terminar en .jpg, .jpeg, o .png)</label>
             <input className="inputImg" type="text" name="imageUrl" value={newBook.imageUrl} onChange={handleInputChange} />
           </div>
           <div className="significadoAsterisco">
