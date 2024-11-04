@@ -19,7 +19,7 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
-  min-height: 150vh;
+  min-height: 100vh;
 }
 
 body {
