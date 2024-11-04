@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../InicioSesion.css'; 
+import Header from '../layout/Header';
 
 const IniciarSesion = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +24,9 @@ const IniciarSesion = () => {
   };
 
   return (
+    <>
+    <Header />
+
     <div className="form-container">
       <h2 className="form-title">Iniciar Sesion</h2>
       <form onSubmit={handleSubmit} className="user-form">
@@ -55,7 +59,9 @@ const IniciarSesion = () => {
         <button type="submit" className="form-button">Iniciar Sesion</button>
       </form>
     </div>
+    </>
   );
+
 };
 
 export default IniciarSesion;

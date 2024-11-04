@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Register.css'; 
+import Header from '../layout/Header';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +26,8 @@ const Register = () => {
   };
 
   return (
+    <>
+    <Header />
     <div className="form-container">
       <h2 className="form-title">Registro de Usuario</h2>
       <form onSubmit={handleSubmit} className="user-form">
@@ -96,6 +99,7 @@ const Register = () => {
         <button type="submit" className="form-button">Registrar</button>
       </form>
     </div>
+    </>
   );
 };
 
