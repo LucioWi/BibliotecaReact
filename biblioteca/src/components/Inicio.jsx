@@ -12,7 +12,7 @@ const Inicio = ({ handleButtonClick }) => {
 
   return (
     <div>
-      <h2>Bienvenido al panel de administrador.</h2>
+      <h2 className='titulo-admin'>Bienvenido al panel de administrador.</h2>
       <div className="card-container">
         <div className="card" onClick={() => handleCardClick('Prestamo')}>
           <img src="./img/imgPrestamo.png" alt="Image 1" />

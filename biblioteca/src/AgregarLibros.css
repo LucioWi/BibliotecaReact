@@ -1,14 +1,15 @@
 .containerBotonesAgregar {
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-    margin: 0; 
-    padding: 0; 
-    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.Agregar, .AgregarAPI {
-    all: unset; 
+.Agregar,
+.AgregarAPI {
+    all: unset;
     border-radius: 6px;
     color: white;
     padding: 1.7vh;
@@ -21,7 +22,7 @@
     margin-left: 10vh;
 }
 
-.Agregar:hover{
+.Agregar:hover {
     color: #ececec;
     background-color: rgb(19, 76, 176);
     cursor: pointer;
@@ -31,30 +32,22 @@
     background-color: rgb(91, 91, 91);
 }
 
-.AgregarAPI:hover{
+.AgregarAPI:hover {
     color: #ececec;
     background-color: rgb(54, 54, 54);
     cursor: pointer;
 }
 
 .char-count {
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
     margin-bottom: 10px;
-    color: #5e5e5e; 
+    color: #5e5e5e;
 }
 
-.significadoAsterisco{
+.significadoAsterisco {
     font-size: 0.75rem;
     margin-top: 25px;
     color: #5e5e5e;
-}
-.text-area{
-    max-width: 100%; 
-    max-height: 500px; 
-    width: 100%; 
-    height: fit-content; 
-    overflow: auto; 
-    resize: vertical; /* Permitir solo el redimensionamiento vertical */
 }
 
 .author-suggestions {
@@ -64,10 +57,10 @@
     border: 1px solid #ccc;
     max-height: 150px;
     overflow-y: auto;
-    position: absolute; /* Superponer el dropdown */
+    position: absolute;
     background-color: white;
-    width: 100%; /* Asegurarse de que ocupe el mismo ancho que el input */
-    z-index: 1000; /* Superponer sobre otros elementos */
+    width: 100%;
+    z-index: 1000;
 }
 
 .author-suggestions li {
@@ -79,7 +72,56 @@
     background-color: #f0f0f0;
 }
 
-/* Asegurarse de que el contenedor del input tenga posición relativa para posicionar bien el dropdown */
+.text-area {
+    background-color: #ffffff;
+    max-width: 100%;
+    max-height: 500px;
+    width: 100%;
+    height: fit-content;
+    overflow: auto;
+    resize: vertical;
+    border-color: #cfcfcf;
+}
+
+.dark-mode .text-area {
+    background-color: #444;
+    border-color: #333;
+    color: #ddd;
+}
+
+.dark-mode .modal {
+    background-color: #555;
+}
+
+.dark-mode input,
+.inputimg {
+    background-color: #444;
+    border-color: #333;
+    color: #ddd;
+}
+
+.dark-mode .author-suggestions li {
+    background-color: #444;
+    border-color: #333;
+    color: #ddd;
+}
+
+.dark-mode .author-suggestions li:hover {
+    background-color: #222;
+}
+
+.dark-mode .char-count {
+    color: #ddd;
+}
+
+.dark-mode .close-button {
+    color: #ddd;
+}
+
+.dark-mode .significadoAsterisco {
+    color: #ddd;
+}
+
 .form-group {
     position: relative;
 }

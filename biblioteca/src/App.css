@@ -1,10 +1,47 @@
-html, body {
+html,
+body {
   font-family: 'Barlow';
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
+
+/*Barra de desplazamiento*/
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark-mode::-webkit-scrollbar {
+  width: 15px;
+}
+
+.dark-mode::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.dark-mode::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/*-------------------------------------*/
 
 #root {
   display: flex;
@@ -27,36 +64,47 @@ body {
   flex-direction: column;
   background-color: #ffffff;
   color: #333;
-  width: 100vw; 
-  overflow-x: hidden; 
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.titulo-admin {
+  margin-left: 5%;
+}
+
+.parrafo-admin {
+  margin-left: 5%;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode .section-buttons {
+  color: #ddd;
+}
+
+.dark-mode .section-buttons.selected {
+  color: #fff;
+  border-bottom: none;
+}
+
+.dark-mode .card-container {
+  background-color: #333;
+}
+
+.dark-mode .card {
+  background-color: #555;
+  color: #ddd;
+}
+
+.dark-mode .card p {
+  color: #bbbbbb;
 }
 
 button {
   border-style: none;
-}
-
-header {
-  background: #0097db;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 10px;
-  margin-bottom: 2vh;
-  text-align: center;
-  min-width: 100vh;
-  position: relative;
-}
-
-.headerLogo {
-  display: flex;
-  align-items: center;
-}
-
-.headerLogo-img {
-  width: 9vh;
-}
-
-.headerLogo-text {
-  color: #ffffff;
 }
 
 a {
@@ -109,10 +157,10 @@ a {
 .section-buttons.selected::before {
   content: '';
   position: absolute;
-  bottom: -9px; 
+  bottom: -9px;
   left: -8px;
   width: calc(100% + 18px);
-  height: 5px; 
+  height: 5px;
   background-color: #ffffff;
   z-index: -1;
 }

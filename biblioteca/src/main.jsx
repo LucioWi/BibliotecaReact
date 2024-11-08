@@ -9,20 +9,20 @@ import IniciarSesion from './components/IniciarSesion.jsx';
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     // errorElement: <Pagenotfound />, para despues
   },
   {
-  path:"/register",
-  element:<Register/> 
- 
+    path: "/register",
+    element: <Register />
+
   },
   {
-    path:"/Inicio-Sesion",
-    element:<IniciarSesion/>
+    path: "/Inicio-Sesion",
+    element: <IniciarSesion />
   }
-  
- 
+
+
 ]);
 
 

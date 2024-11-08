@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Header.css'
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -14,6 +15,20 @@ const Header = () => {
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
     };
+
+    const [enabled, setEnabled] = useState(() => {
+        const savedMode = localStorage.getItem('dark-mode');
+        return savedMode === 'true';
+    });
+
+    useEffect(() => {
+        localStorage.setItem('dark-mode', enabled);
+        if (enabled) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    }, [enabled]);
 
     return (
         <header>
@@ -36,6 +51,8 @@ const Header = () => {
                             </div>
                         )}
                     </div>
+                    <button onClick={() => setEnabled(!enabled)}> {enabled ? '☀️' : '🌙'}</button>
+
                 </div>
             </nav>
         </header>

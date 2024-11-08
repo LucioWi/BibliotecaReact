@@ -2,8 +2,8 @@ import React from 'react';
 
 const Prestamo = () => (
     <div>
-        <h2>Contenido de Prestamo</h2>
-        <p>Aquí puedes ver la información sobre los prestamos.</p>
+        <h2 className='titulo-admin'>Contenido de Prestamo</h2>
+        <p className='parrafo-admin'>Aquí puedes ver la información sobre los prestamos.</p>
         {/* Agrega más contenido aquí */}
     </div>
 );

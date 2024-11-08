@@ -1,3 +1,27 @@
+header {
+    background: #0097db;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+    margin-bottom: 2vh;
+    text-align: center;
+    min-width: 100vh;
+    position: relative;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo-img {
+    width: 9vh;
+}
+
+.headerLogo-text {
+    color: #ffffff;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -34,7 +58,6 @@ nav {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    /* Posiciona justo debajo del botón Account */
     left: 0;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -51,11 +74,10 @@ nav {
     text-align: left;
 }
 
-/* Dropdown styles */
 .dropdown-container {
     position: relative;
     display: inline-block;
-  }
+}
 
 .dropdown button:hover {
     background-color: #f0f0f0;
