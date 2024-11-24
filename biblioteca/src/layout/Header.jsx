@@ -35,7 +35,7 @@ const Header = () => {
             <nav>
                 <div className='headerLogo'>
                     <a href="">
-                        <img className='headerLogo-img' src="./img/EnetLogo.png" alt="Logo" />
+                        <img className='headerLogo-img' src="./img/EnetLogo.png" alt="Logo Enet" />
                         <h1 className='headerLogo-text'>Enet Biblioteca</h1>
                     </a>
                 </div>
